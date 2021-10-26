@@ -3,7 +3,7 @@ import React, { useReducer, useEffect } from "react";
 import { AppProps } from "next/app";
 
 import AuthContext from "~/src/lib/AuthContext";
-import authReducer from "~/src/lib/authReducer.ts";
+import authReducer from "~/src/lib/authReducer";
 import { listenAuthState } from "~/src/lib/firebase";
 
 function MyApp({ Component, pageProps }: AppProps) {
