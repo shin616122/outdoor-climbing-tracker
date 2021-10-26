@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { getAuth, signInWithRedirect, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 export const config = {
@@ -19,7 +19,7 @@ export const auth = getAuth(app);
 export const Login = async () => {
   const provider = new GoogleAuthProvider();
 
-  signInWithPopup(auth, provider)
+  signInWithRedirect(auth, provider)
     .then(function (result: any) {
       return result;
     })
