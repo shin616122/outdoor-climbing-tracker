@@ -1,13 +1,15 @@
 // import Link from "next/link";
 import Layout from "../components/Layout";
 import { Login, Logout, auth } from "~/src/lib/firebase";
+import React from "react";
+import { Button, Typography } from "@mui/material";
 
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
+    <Typography variant="h1" component="div" gutterBottom>Hello Next.js 👋</Typography>
     <div>
-      <button onClick={() => Login()}>ログイン</button>
-      <button onClick={() => Logout()}>ログアウト</button>
+      <Button variant="contained" onClick={() => Login()}>ログイン</Button>
+      <Button variant="contained" onClick={() => Logout()}>ログアウト</Button>
     </div>
     <div>
       <pre>
