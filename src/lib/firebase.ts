@@ -1,5 +1,6 @@
-import firebase from "firebase/app";
-import "firebase/auth"; // If you need it
+import { initializeApp } from 'firebase/app';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 export const config = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -11,16 +12,14 @@ export const config = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-!firebase.apps.length ? firebase.initializeApp(config) : firebase.app();
+export const app = initializeApp(config);
+export const firestore = getFirestore(app);
+export const auth = getAuth(app);
 
-export const auth = firebase.auth();
-export const Firebase = firebase;
+export const Login = async () => {
+  const provider = new GoogleAuthProvider();
 
-export const Login = () => {
-  const provider = new firebase.auth.GoogleAuthProvider();
-  firebase
-    .auth()
-    .signInWithPopup(provider)
+  signInWithPopup(auth, provider)
     .then(function (result: any) {
       return result;
     })
@@ -35,7 +34,7 @@ export const Login = () => {
 
 // ログイン状態の検知
 export const listenAuthState = (dispatch: any) => {
-  return firebase.auth().onAuthStateChanged(function (user) {
+  return auth.onAuthStateChanged(function (user) {
     if (user) {
       // User is signed in.
       dispatch({
@@ -55,7 +54,7 @@ export const listenAuthState = (dispatch: any) => {
 };
 
 export const firebaseUser = () => {
-  return firebase.auth().currentUser;
+  return auth.currentUser;
 };
 
 // Logout
