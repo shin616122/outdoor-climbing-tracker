@@ -1,0 +1,52 @@
+{
+    "ogawayama": [
+        {
+            "id": 1,
+            "nameEN": "Campsite Entrance",
+            "nameJP": "キャンプ場入口",
+            "rocks": [
+                {
+                    "id": 1,
+                    "nameEN": "Fantasy Boulder",
+                    "nameJP": "ファンタジー岩",
+                    "latitude": 35.91187,
+                    "longitude": 138.64249,
+                    "routes": [
+                        {
+                            "id": 1,
+                            "label": "a",
+                            "nameEN": "Go Mantle",
+                            "nameJP": "Goマントル",
+                            "gradeJP": "2級",
+                            "gradeUSA": "V4"
+                        },
+                        {
+                            "id": 2,
+                            "label": "b",
+                            "nameEN": "Gezan Route",
+                            "nameJP": "下山ルート",
+                            "gradeJP": "10級",
+                            "gradeUSA": "V0"
+                        },
+                        {
+                            "id": 3,
+                            "label": "c",
+                            "nameEN": "",
+                            "nameJP": "",
+                            "gradeJP": "4級",
+                            "gradeUSA": "V2"
+                        },
+                        {
+                            "id": 4,
+                            "label": "d",
+                            "nameEN": "",
+                            "nameJP": "",
+                            "gradeJP": "3級",
+                            "gradeUSA": "V3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
