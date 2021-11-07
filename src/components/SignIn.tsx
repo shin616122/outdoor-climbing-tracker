@@ -1,5 +1,5 @@
-import { Avatar, Button, Checkbox, CssBaseline, FormControlLabel, Grid, Link, Paper, TextField, Typography } from "@mui/material";
-import { Box, createTheme, ThemeProvider } from "@mui/system";
+import { Avatar, Button, CssBaseline, Grid, Link, Paper, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import React from "react";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { Login } from "~/src/lib/firebase";
